@@ -211,12 +211,9 @@
                         <span class="sr-only">Toggle sidebar</span>
                     </button>
                     <a href="/" class="flex items-center justify-center mr-4">
-                        @if ($websiteInfo->image)
-                            <img src="{{ asset('assets/images/website_infos/logo192.png') }}" class="h-8 mr-3"
-                                alt="Flowbite Logo" />
-                        @endif
-                        <span
-                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">{{ $websiteInfo->name }}</span>
+                        <img src="{{ asset('assets/images/bg/logo.png') }}" class="h-8 mr-3" alt="Flowbite Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Repeat
+                            Gym</span>
                     </a>
 
                 </div>
@@ -421,12 +418,12 @@
             class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700 "
             aria-label="Sidenav" id="drawer-navigation">
             <a href="/" class="flex items-center justify-center p-3.5 border-b dark:border-b-slate-600">
-                @if ($websiteInfo->image)
-                    <img src="{{ asset('assets/images/website_infos/logo192.png') }}"
-                        class="object-cover h-8 mr-3 rounded-full aspect-square" alt="Flowbite Logo" />
-                @endif
+
+                <img src="{{ asset('assets/images/bg/logo.png') }}"
+                    class="object-cover h-8 mr-3 rounded-full aspect-square" alt="Flowbite Logo" />
+
                 <span class="self-center text-2xl font-semibold line-clamp-1 dark:text-white">
-                    {{ $websiteInfo->name }}
+                    Repeat Gym
                 </span>
             </a>
             <div class="h-full px-3 py-5 overflow-y-auto bg-white dark:bg-gray-800 pb-[8rem]">
