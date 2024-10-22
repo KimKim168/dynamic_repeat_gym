@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ $websiteInfo->name }}</title>
+    <title>REPEAT GYM</title>
 
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 
@@ -31,10 +31,10 @@
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="{{ $websiteInfo->name }}">
-    <link rel="apple-touch-icon" href="{{ asset('assets/images/website_infos/logo.png') }}">
-    <link rel="apple-touch-startup-image" href="{{ asset('assets/images/website_infos/logo.png') }}">
-    <link rel="icon" href="{{ asset('assets/images/website_infos/logo.png') }}">
+    <meta name="apple-mobile-web-app-title" content="REPEAT GYM">
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/bg/logo.png') }}">
+    <link rel="apple-touch-startup-image" href="{{ asset('assets/images/bg/logo.png') }}">
+    <link rel="icon" href="{{ asset('assets/images/bg/logo.png') }}">
 
     <style>
         .select2-selection {
