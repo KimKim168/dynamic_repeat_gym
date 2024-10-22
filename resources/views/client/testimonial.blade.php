@@ -24,19 +24,22 @@
             </div>
 
             <div class="relative  overflow-hidden rounded-md">
-                <img class="mx-auto rounded-md aspect-video object-cover  cursor-pointer"
-                    src="{{ asset('assets/images/videos/' . $videosTop->image) }}" alt="Book Cover" />
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <a class="glightbox inline-flex items-center px-4 py-3 text-xs sm:text-sm lg:text-base font-semibold text-red-600 bg-white border-gray-200 rounded-full shadow-sm gap-x-2 hover:bg-gray-50 dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
-                        href="{{ $videosTop->link }}" data-gallery="gallery1">
-                        <svg class="flex-shrink-0 w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        Play Video
-                    </a>
-                </div>
+                @if ($videosTop)
+                    <img class="mx-auto rounded-md aspect-video object-cover  cursor-pointer"
+                        src="{{ asset('assets/images/videos/' . $videosTop->image) }}" alt="Book Cover" />
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <a class="glightbox inline-flex items-center px-4 py-3 text-xs sm:text-sm lg:text-base font-semibold text-red-600 bg-white border-gray-200 rounded-full shadow-sm gap-x-2 hover:bg-gray-50 dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
+                            href="{{ $videosTop->link }}" data-gallery="gallery1">
+                            <svg class="flex-shrink-0 w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Play Video
+                        </a>
+                    </div>
+                @endif
+
             </div>
 
         </div>

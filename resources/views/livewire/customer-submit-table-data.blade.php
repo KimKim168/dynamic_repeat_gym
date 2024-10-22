@@ -78,7 +78,7 @@
 
                         <td class="px-6 py-4">
                             <div class="flex items-start justify-center gap-3" x-data="{ open: false }">
-                                @can('view user')
+                                @can('view customer')
                                     <div x-data="{ showPopup: false }">
                                         <a @click.prevent="showPopup = !showPopup">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -145,54 +145,13 @@
                                                                 <div class="flex nowrap">
                                                                     <p
                                                                         class="w-[123px] uppercase tracking-wide text-sm text-gray-500 dark:text-gray-300 font-semibold border-r border-gray-600 dark:border-gray-300 pr-5 mr-5">
-                                                                        {{ __('messages.email') }}
+                                                                        {{ __('messages.location') }}
                                                                     </p>
                                                                     <p class="text-sm text-gray-600 dark:text-gray-200">
-                                                                        {{ $item->email ? $item->email : 'N/A' }}
+                                                                        {{ $item->location ? $item->location : 'N/A' }}
                                                                     </p>
                                                                 </div>
-                                                                <div class="flex nowrap">
-                                                                    <p
-                                                                        class="w-[123px] uppercase tracking-wide text-sm text-gray-500 dark:text-gray-300 font-semibold border-r border-gray-600 dark:border-gray-300 pr-5 mr-5">
-                                                                        {{ __('messages.dateOfBirth') }}
-                                                                    </p>
-                                                                    <p class="text-sm text-gray-600 dark:text-gray-200">
-                                                                        {{ $item->date_of_birth ? $item->date_of_birth : 'N/A' }}
-                                                                    </p>
-                                                                </div>
-                                                                <div class="flex nowrap">
-                                                                    <p
-                                                                        class="w-[123px] uppercase tracking-wide text-sm text-gray-500 dark:text-gray-300 font-semibold border-r border-gray-600 dark:border-gray-300 pr-5 mr-5">
-                                                                        {{ __('messages.address') }}
-                                                                    </p>
-                                                                    <p class="text-sm text-gray-600 dark:text-gray-200">
-                                                                        {{ $item->address ? $item->address : 'N/A' }}
-                                                                    </p>
-                                                                </div>
-                                                                {{-- <div class="flex nowrap">
-                                                                    <p
-                                                                        class="w-[123px] uppercase tracking-wide text-sm text-gray-500 dark:text-gray-300 font-semibold border-r border-gray-600 dark:border-gray-300 pr-5 mr-5">
-                                                                        {{ __('messages.role') }}
-                                                                    </p>
-                                                                    <p
-                                                                        class="flex flex-wrap gap-1.5 text-sm text-gray-600 uppercase dark:text-gray-600">
-                                                                        @forelse ($item->roles as $role)
-                                                                            <span
-                                                                                class="bg-blue-200 ">{{ $role->name }}</span>
-                                                                        @empty
-                                                                            <span>N/A</span>
-                                                                        @endforelse
-                                                                    </p>
-                                                                </div> --}}
-                                                                <div class="flex nowrap">
-                                                                    <p
-                                                                        class="w-[123px] flex-shrink-0 uppercase tracking-wide text-sm text-gray-500 dark:text-gray-300 font-semibold border-r border-gray-600 dark:border-gray-300 pr-5 mr-5">
-                                                                        {{ __('messages.expiredAt') }}
-                                                                    </p>
-                                                                    <p class="text-sm text-gray-600 dark:text-gray-200">
-                                                                        {{ $item->expired_at ? $item->started_at . ' => ' . $item->expired_at : 'No Expire' }}
-                                                                    </p>
-                                                                </div>
+
                                                                 <div class="flex nowrap">
                                                                     <p
                                                                         class="w-[123px] uppercase tracking-wide text-sm text-gray-500 dark:text-gray-300 font-semibold border-r border-gray-600 dark:border-gray-300 pr-5 mr-5">
@@ -221,7 +180,7 @@
                                     </div>
                                 @endcan
 
-                                @can('delete user')
+                                @can('delete customer')
                                     <div class="pb-1" x-data="{ tooltip: false }">
                                         <!-- Modal toggle -->
                                         <a wire:confirm='Are you sure? you want to delete customer : {{ $item->name }}'

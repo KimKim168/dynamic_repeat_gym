@@ -1,4 +1,27 @@
 @extends('layouts.client')
+
+@section('meta-data')
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/bg/logo.png') }}">
+    <link rel="icon" href="{{ asset('assets/images/bg/logo.png') }}"">
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/bg/logo.png') }}"">
+    <link rel="icon" href="{{ asset('assets/images/bg/logo.png') }}"">
+    <meta name="description"
+        content="Best gym in Phnom Penh offering top-quality fitness training, personal trainers, yoga classes, and the latest gym equipment. Join us to achieve your health and wellness goals in Cambodia.">
+    <meta name="keywords"
+        content="Cambodian fitness center, Best gym in Phnom Penh, Gym training in Cambodia, Personal training Phnom Penh, Fitness classes Cambodia, Gym memberships Phnom Penh, Top fitness center Cambodia, Gym equipment Phnom Penh, Yoga classes Cambodia, Health and wellness Phnom Penh">
+
+    <title>Best Gym in Phnom Penh | Repeat Gym Cambodia</title>
+    <link rel="canonical" href="https://www.repeatgym.com/">
+    <meta name="author" content="Repeat Gym">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="REPEAT GYM Cambodia">
+    <meta property="og:url" content="https://www.repeatgym.com/">
+    <meta property="og:description"
+        content="Join the best gym in Phnom Penh for top-quality fitness training, yoga classes, and state-of-the-art gym equipment. Achieve your health and wellness goals in Cambodia with us.">
+    <meta property="og:image" content="{{ asset('assets/images/gallery/' . $homeImage->image) }}">
+    <meta property="og:type" content="website">
+@endsection
+
 @section('content')
     <!-- Strat transform -->
     <div id="controls-carousel" class="relative w-full lg:mt-8 mt-[75px]"

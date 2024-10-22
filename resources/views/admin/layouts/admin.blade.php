@@ -652,7 +652,7 @@
                                                 alt="icon"
                                                 class="object-contain w-8 h-8 p-0.5 bg-white dark:bg-gray-200 rounded">
                                             <span class="ml-3">
-                                                {{ __('messages.news') }}
+                                                {{ __('messages.tips') }}
                                             </span>
                                         </x-sidebar-item>
 
@@ -783,22 +783,25 @@
                         @endcan
 
                         {{-- Customer --}}
-                        <li x-data="{
-                            init() {
-                                if ({{ request()->is('admin/customer-submit*') ? 'true' : 'false' }}) {
-                                    this.$nextTick(() => this.$refs.customer - submit.scrollIntoView({ behavior: 'smooth' }));
+                        @can('view customer')
+                            <li x-data="{
+                                init() {
+                                    if ({{ request()->is('admin/customer-submit*') ? 'true' : 'false' }}) {
+                                        this.$nextTick(() => this.$refs.customer - submit.scrollIntoView({ behavior: 'smooth' }));
+                                    }
                                 }
-                            }
-                        }" x-ref="customer-submit">
-                            <x-sidebar-item href="{{ route('admin.customer-submit.index') }}"
-                                class="{{ request()->is('admin/customer-submit*') ? 'bg-slate-200 dark:bg-slate-500' : '' }}">
-                                <img src="{{ asset('assets/icons/customer.png') }}" alt="icon"
-                                    class="object-contain w-8 h-8 bg-white rounded dark:bg-gray-200">
-                                <span class="ml-3">
-                                    {{ __('messages.customers') }}
-                                </span>
-                            </x-sidebar-item>
-                        </li>
+                            }" x-ref="customer-submit">
+                                <x-sidebar-item href="{{ route('admin.customer-submit.index') }}"
+                                    class="{{ request()->is('admin/customer-submit*') ? 'bg-slate-200 dark:bg-slate-500' : '' }}">
+                                    <img src="{{ asset('assets/icons/customer.png') }}" alt="icon"
+                                        class="object-contain w-8 h-8 bg-white rounded dark:bg-gray-200">
+                                    <span class="ml-3">
+                                        {{ __('messages.customers') }}
+                                    </span>
+                                </x-sidebar-item>
+                            </li>
+                        @endcan
+
 
                         {{-- End Customer --}}
 

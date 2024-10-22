@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="px-4">
-        <x-form-header :value="__('News')" />
+        <x-form-header :value="__('Tips')" />
 
         @livewire('news-table-data')
 

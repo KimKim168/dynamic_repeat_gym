@@ -95,13 +95,16 @@
                     <div class="md:mt-0 mt-4 flex flex-col p-2">
 
                         <div class="text-center">
-                            <h2
-                                class="mb-2 md:mb-7 text-3xl md:text-5xl tracking-tight text-center font-costum5 text-[#11ace3] uppercase">
-                                {{ $groupTranning->name }}
-                            </h2>
-                            <p class="md:mb-6 mb-2 font-costum4 text-white md:text-xl">
-                                {{ $groupTranning->short_description }}
-                            </p>
+                            @if ($groupTranning)
+                                <h2
+                                    class="mb-2 md:mb-7 text-3xl md:text-5xl tracking-tight text-center font-costum5 text-[#11ace3] uppercase">
+                                    {{ $groupTranning->name }}
+                                </h2>
+                                <p class="md:mb-6 mb-2 font-costum4 text-white md:text-xl">
+                                    {{ $groupTranning->short_description }}
+                                </p>
+                            @endif
+
                         </div>
 
 
@@ -119,6 +122,9 @@
                                     </div>
                                 </div>
                             @empty
+                                <p
+                                    class="text-red-500 text-center max-w-screen-xl mx-auto  text-xs md:text-base font-costum8">
+                                    No available</p>
                             @endforelse
 
 
@@ -161,6 +167,9 @@
                                     </div>
                                 </div>
                             @empty
+                                <p
+                                    class="text-red-500 text-center max-w-screen-xl mx-auto  text-xs md:text-base font-costum8">
+                                    No available</p>
                             @endforelse
 
 
@@ -183,6 +192,9 @@
                                         </div>
                                     </swiper-slide>
                                 @empty
+                                    <p
+                                        class="text-red-500 text-center max-w-screen-xl mx-auto  text-xs md:text-base font-costum8">
+                                        No available</p>
                                 @endforelse
 
                             </swiper-container>
@@ -234,6 +246,8 @@
                             </div>
                         </div>
                     @empty
+                        <p class="text-red-500 text-center max-w-screen-xl mx-auto  text-xs md:text-base font-costum8">
+                            No available</p>
                     @endforelse
 
                 </div>

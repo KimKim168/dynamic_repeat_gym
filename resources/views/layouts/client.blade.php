@@ -9,6 +9,9 @@
     <script defer src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
+    @yield('meta-data')
+
+
     <!-- Start Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -143,5 +143,6 @@ return [
     'linkLocationSecond' => 'Link Location Second',
     'preferLocation' => 'Prefer Location',
     'customers' => 'Customers',
+    'tips' => 'Tips',
 
 ];

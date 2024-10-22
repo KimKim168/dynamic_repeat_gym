@@ -1,4 +1,5 @@
 @extends('layouts.client')
+
 @section('content')
     <!--strat image with contant -->
     <section class="pt-10 lg:mt-10 mt-[35px]">
