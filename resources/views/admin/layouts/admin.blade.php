@@ -530,37 +530,21 @@
                                             }
                                         }
                                     }" x-ref="videos" class="pt-1">
-                                        <button type="button"
-                                            class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 {{ request()->is('admin/videos*') ? 'bg-slate-200 dark:bg-slate-500' : '' }}"
-                                            :class="{ 'bg-slate-100 dark:bg-slate-700': open }"
-                                            @click="open = !open; if (open) $nextTick(() => $refs.videos.scrollIntoView({ behavior: 'smooth' }))">
-                                            <img src="{{ asset('assets/images/databases/' . $database->image) }}" alt="icon"
-                                                class="object-contain w-8 h-8 p-0.5 bg-white dark:bg-gray-200 rounded">
-                                            <span class="flex-1 text-left ms-3 rtl:text-right whitespace-nowrap">
-                                                {{ app()->getLocale() == 'kh' ? $database->name_kh : $database->name }}
-                                            </span>
-                                            <svg class="w-3 h-3 transition-transform duration-200 transform"
-                                                :class="{ 'rotate-180': open }" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                                            </svg>
-                                        </button>
-                                        <ul x-show="open" x-transition class="py-2 ml-2 space-y-2">
-                                            <li>
-                                                <a href="{{ route('admin.videos.index') }}"
-                                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 {{ request()->is('admin/videos') ? 'bg-slate-200 dark:bg-slate-500' : '' }}">
-                                                    {{ app()->getLocale() == 'kh' ? $database->name_kh : $database->name }}
-                                                </a>
-                                            </li>
-                                            {{-- 
-                                            <li>
-                                                <a href="{{ url('admin/videos_categories') }}"
-                                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 {{ request()->is('admin/videos_categories') ? 'bg-slate-200 dark:bg-slate-500' : '' }}">
-                                                    {{ __('messages.category') }}</a>
-                                            </li> --}}
 
-                                        </ul>
+                                    <li>
+                                        <x-sidebar-item href="{{ route('admin.videos.index') }}"
+                                            class="{{ request()->is('admin/videos*') ? 'bg-slate-200 dark:bg-slate-500' : '' }}">
+                                            <img src="{{ asset('assets/images/databases/1719983451_video-marketing.png') }}"
+                                                alt="icon"
+                                                class="object-contain w-8 h-8 p-0.5 bg-white dark:bg-gray-200 rounded">
+                                            <span class="ml-3">
+                                                {{ __('messages.videos') }}
+                                            </span>
+                                        </x-sidebar-item>
+
+                                    </li>
+
+
                                     </li>
                                 @endcan
                             @break
@@ -660,35 +644,24 @@
                                             }
                                         }
                                     }" x-ref="news" class="pt-1">
-                                        <button type="button"
-                                            class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 {{ request()->is('admin/news*') ? 'bg-slate-200 dark:bg-slate-500' : '' }}"
-                                            :class="{ 'bg-slate-100 dark:bg-slate-700': open }"
-                                            @click="open = !open; if (open) $nextTick(() => $refs.news.scrollIntoView({ behavior: 'smooth' }))">
-                                            <img src="{{ asset('assets/images/databases/' . $database->image) }}" alt="icon"
+
+                                    <li>
+                                        <x-sidebar-item href="{{ route('admin.news.index') }}"
+                                            class="{{ request()->is('admin/news*') ? 'bg-slate-200 dark:bg-slate-500' : '' }}">
+                                            <img src="{{ asset('assets/images/databases/1719990023_bulletin.png') }}"
+                                                alt="icon"
                                                 class="object-contain w-8 h-8 p-0.5 bg-white dark:bg-gray-200 rounded">
-                                            <span class="flex-1 text-left ms-3 rtl:text-right whitespace-nowrap">
-                                                {{ app()->getLocale() == 'kh' ? $database->name_kh : $database->name }}
+                                            <span class="ml-3">
+                                                {{ __('messages.news') }}
                                             </span>
-                                            <svg class="w-3 h-3 transition-transform duration-200 transform"
-                                                :class="{ 'rotate-180': open }" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                                            </svg>
-                                        </button>
-                                        <ul x-show="open" x-transition class="py-2 ml-2 space-y-2">
-                                            <li>
-                                                <a href="{{ route('admin.news.index') }}"
-                                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 {{ request()->is('admin/news') ? 'bg-slate-200 dark:bg-slate-500' : '' }}">
-                                                    {{ app()->getLocale() == 'kh' ? $database->name_kh : $database->name }}
-                                                </a>
-                                            </li>
-                                            {{-- <li>
+                                        </x-sidebar-item>
+
+                                    </li>
+                                    {{-- <li>
                                                 <a href="{{ url('admin/news_categories') }}"
                                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 {{ request()->is('admin/news_categories') ? 'bg-slate-200 dark:bg-slate-500' : '' }}">
                                                     {{ __('messages.category') }}</a>
                                             </li> --}}
-                                        </ul>
                                     </li>
                                 @endcan
                             @break
@@ -808,6 +781,8 @@
                                 </x-sidebar-item>
                             </li>
                         @endcan
+
+                        {{-- Customer --}}
                         <li x-data="{
                             init() {
                                 if ({{ request()->is('admin/customer-submit*') ? 'true' : 'false' }}) {
@@ -824,6 +799,9 @@
                                 </span>
                             </x-sidebar-item>
                         </li>
+
+                        {{-- End Customer --}}
+
                         {{-- @can('view gallery')
                             <li x-data="{
                                 init() {

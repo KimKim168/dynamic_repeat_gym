@@ -148,6 +148,8 @@
                     </p>
                 </div>
             @empty
+                <p class="text-red-500 text-center max-w-screen-xl mx-auto  text-xs md:text-base font-costum8">
+                    No available</p>
             @endforelse
 
 
