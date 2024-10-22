@@ -266,21 +266,21 @@
                         <li>
                             <a href="{{ url('/') }}"
                                 class="{{ request()->is('/') ? 'decoration-blue-600 underline underline-offset-8 text-blue-600 bg-gray-200' : 'text-black' }} flex items-center p-2  rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                <img src="{{ asset('assets/img/icon/home.png') }}" class="w-5">
+                                <img src="{{ asset('assets/icons/home.png') }}" class="w-5">
                                 <span class="ms-3">Home</span>
                             </a>
                         </li>
                         <li>
                             <a href="{{ url('/whyrepeatgym') }}"
                                 class="{{ request()->is('whyrepeatgym') ? 'decoration-blue-600 underline underline-offset-8 text-blue-600 bg-gray-200' : 'text-black' }} flex items-center p-2  rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                <img src="{{ asset('assets/img/icon/gym.png') }}" class="w-5">
+                                <img src="{{ asset('assets/icons/gym.png') }}" class="w-5">
                                 <span class="ms-3">WHy Repeat Gym</span>
                             </a>
                         </li>
                         <li>
                             <a href="{{ url('/service') }}"
                                 class="{{ request()->is('service') ? 'decoration-blue-600 underline underline-offset-8 text-blue-600 bg-gray-200' : 'text-black' }} flex items-center p-2  rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                <img src="{{ asset('assets/img/icon/servicePage.png') }}" class="w-5">
+                                <img src="{{ asset('assets/icons/servicePage.png') }}" class="w-5">
                                 <span class="ms-3">Our Services</span>
                             </a>
                         </li>
@@ -288,21 +288,21 @@
                         <li>
                             <a href="{{ url('/testimonial') }}"
                                 class="{{ request()->is('testimonial') ? 'decoration-blue-600 underline underline-offset-8 text-blue-600 bg-gray-200' : 'text-black' }} flex items-center p-2  rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                <img src="{{ asset('assets/img/icon/peopleGym.png') }}" class="w-5">
+                                <img src="{{ asset('assets/icons/peopleGym.png') }}" class="w-5">
                                 <span class="ms-3">Testimonials</span>
                             </a>
                         </li>
                         <li>
                             <a href="{{ url('/tip') }}"
                                 class="{{ request()->is('tip') ? 'decoration-blue-600 underline underline-offset-8 text-blue-600 bg-gray-200' : 'text-black' }} flex items-center p-2  rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                <img src="{{ asset('assets/img/icon/peopleGym.png') }}" class="w-5">
+                                <img src="{{ asset('assets/icons/peopleGym.png') }}" class="w-5">
                                 <span class="ms-3">tips</span>
                             </a>
                         </li>
                         <li>
                             <a href="{{ url('/contact_us') }}"
                                 class="{{ request()->is('contact_us') ? 'decoration-blue-600 underline underline-offset-8 text-blue-600 bg-gray-200' : 'text-black' }} flex items-center p-2  rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                <img src="{{ asset('assets/img/icon/contact-page.png') }}" class="w-5">
+                                <img src="{{ asset('assets/icons/contact-page.png') }}" class="w-5">
                                 <span class="ms-3">Contact Us</span>
                             </a>
                         </li>

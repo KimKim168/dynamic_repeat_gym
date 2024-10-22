@@ -62,7 +62,7 @@
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
                         </svg>
                     </button>
-                    <div id="filterDropdown" class="z-10 hidden w-48 p-3 bg-white rounded-lg shadow dark:bg-gray-700">
+                    <div id="filterDropdown" class="z-10 hidden w-80 p-3 bg-white rounded-lg shadow dark:bg-gray-700">
                         <h6 class="mb-3 text-sm font-bold text-gray-900 dark:text-white">Filter by Position</h6>
                         <ul class="space-y-2 text-sm" aria-labelledby="filterDropdownButton">
                             <li class="flex items-center">
@@ -108,25 +108,24 @@
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
-                    <th scope="col" class="px-4 py-3">{{__('messages.no')}}</th>
-                    <th scope="col" class="px-4 py-3">{{__('messages.image')}}</th>
+                    <th scope="col" class="px-4 py-3">{{ __('messages.no') }}</th>
+                    <th scope="col" class="px-4 py-3">{{ __('messages.image') }}</th>
                     <th scope="col" class="px-4 py-3 " wire:click='setSortBy("name")'>
                         <div class="flex items-center cursor-pointer">
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                class="lucide lucide-chevrons-up-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-chevrons-up-down">
                                 <path d="m7 15 5 5 5-5" />
                                 <path d="m7 9 5-5 5 5" />
                             </svg>
-                            {{__('messages.title')}}
+                            {{ __('messages.title') }}
                         </div>
                     </th>
-                    <th scope="col" class="py-3">{{__('messages.shortDescription')}}</th>
-                    <th scope="col" class="py-3 text-center">{{__('messages.position')}}</th>
-                    <th scope="col" class="py-3 text-center">{{__('messages.orderIndex')}}</th>
-                    <th scope="col" class="py-3 text-center">{{__('messages.action')}}</th>
+                    <th scope="col" class="py-3">{{ __('messages.shortDescription') }}</th>
+                    <th scope="col" class="py-3 text-center">{{ __('messages.position') }}</th>
+                    <th scope="col" class="py-3 text-center">{{ __('messages.orderIndex') }}</th>
+                    <th scope="col" class="py-3 text-center">{{ __('messages.action') }}</th>
                 </tr>
             </thead>
             <tbody>

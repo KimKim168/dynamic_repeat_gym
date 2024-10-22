@@ -16,7 +16,7 @@ class AdminUserController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('permission:view user', ['only' => ['index', 'show']]);
+        // $this->middleware('permission:view user', ['only' => ['index', 'show']]);
         $this->middleware('permission:create user', ['only' => ['create', 'store']]);
         // $this->middleware('permission:update user', ['only' => ['edit', 'update', 'updateUserPassword']]);
         $this->middleware('permission:delete user', ['only' => ['destroy']]);
