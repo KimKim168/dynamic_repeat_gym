@@ -154,7 +154,7 @@
     <!-- Strat section -->
     <section class="mt-20 w-full bg-black flex py-20 px-7 md:p-20 relative"
         style="
-                background-image: url('assets/img/bg/bg1.jpg');
+                background-image: url('assets/images/bg/bg1.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
             ">
