@@ -979,12 +979,7 @@
                                             {{ __('messages.menu') }}
                                         </a>
                                     </li> --}}
-                                    {{-- <li>
-                                        <a href="{{ url('admin/settings/links') }}"
-                                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 {{ request()->is('admin/settings/links*') ? 'bg-slate-200 dark:bg-slate-500' : '' }}">
-                                            {{ __('messages.link') }}
-                                        </a>
-                                    </li> --}}
+                                    
                                     <li>
                                         <a href="{{ url('admin/settings/footer/1/edit') }}"
                                             class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 {{ request()->is('admin/settings/footer*') ? 'bg-slate-200 dark:bg-slate-500' : '' }}">
@@ -995,6 +990,12 @@
                                         <a href="{{ url('admin/settings/contact/1/edit') }}"
                                             class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 {{ request()->is('admin/settings/contact*') ? 'bg-slate-200 dark:bg-slate-500' : '' }}">
                                             {{ __('messages.contact') }}
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('admin/settings/links') }}"
+                                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 {{ request()->is('admin/settings/links*') ? 'bg-slate-200 dark:bg-slate-500' : '' }}">
+                                            {{ __('messages.link') }}
                                         </a>
                                     </li>
                                     {{-- @can('view database')

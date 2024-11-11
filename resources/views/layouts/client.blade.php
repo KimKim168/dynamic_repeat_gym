@@ -17,8 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/bg/LOGO For Facebook Profile 02.png') }}">
     <link
-        href="https://fonts.googleapis.com/css2?family=Moul&family=Poppins:ital&family=Rubik+Doodle+Shadow&display=swap,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Siemreap&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Moul&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Doodle+Shadow&family=Siemreap&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet" />
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/css/glightbox.css" />
     <link rel="stylesheet" href="{{ asset('assets/css/no-tailwind.css') }}">
@@ -196,36 +197,30 @@
                         warning: "#fab105",
                         warningHover: "#ffb915",
                     },
-                },
-                fontFamily: {
-                    koluen: ["Koulen"],
-                    costum1: ["Costum1", "sans-serif"],
-                    costum2: ["Costum2", "sans-serif"],
-                    costum3: ["Costum3", "sans-serif"],
-                    costum4: ["Costum4", "sans-serif"],
-                    costum5: ["Costum5", "sans-serif"],
-                    costum6: ["Costum6", "sans-serif"],
-                    costum7: ["Costum7", "sans-serif"],
-                    costum8: ["Costum8", "sans-serif"],
-                    costum9: ["Costum9", "sans-serif"],
-                    rubik: ["Rubik Doodle Shadow"],
-                    Costum10: ["FunlandParkOpen", "Rubik Doodle Shadow"],
-                    poppin: ["Poppins"]
+                    fontFamily: {
+                        koluen: ["Koulen"],
+                        costum1: ["Costum1", "sans-serif"],
+                        costum2: ["Costum2", "sans-serif"],
+                        costum3: ["Costum3", "sans-serif"],
+                        costum4: ["Costum4", "sans-serif"],
+                        costum5: ["Costum5", "sans-serif"],
+                        costum6: ["Costum6", "sans-serif"],
+                        costum7: ["Costum7", "sans-serif"],
+                        costum8: ["Costum8", "sans-serif"],
+                        costum9: ["Costum9", "sans-serif"],
+                        rubik: ["Rubik Doodle Shadow"],
+                        Costum10: ["FunlandParkOpen", "Rubik Doodle Shadow"],
+                        poppin: ["Poppins"],
+                        roboto: ["Roboto", "sans-serif"],
+                    },
                 },
             },
         };
     </script>
+
 </head>
 
-<body
-    style="
-            background-image: url('assets/images/bg/Background\ Home\ Page.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-position-x: center;
-        "
-    class="text-white bg-[#151515]">
+<body class="text-white bg-[#151515]">
     <!-- Start Navbar -->
     <nav class="bg-[#0b0b0c] text-white fixed w-full z-40 top-0 start-0 ">
         <div class="max-w-screen-xl flex flex-wrap justify-between items-center mx-auto p-4 border-b border-gray-400">
@@ -321,7 +316,7 @@
                             <path
                                 d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                         </svg>
-                        <span class="text-sm">{{ $footer->phone_number }}</span>
+                        <span class="text-sm font-roboto font-light">{{ $footer->phone_number }}</span>
                     </div>
                     <div class="flex items-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"
@@ -330,7 +325,7 @@
                             <circle cx="12" cy="12" r="10" />
                             <polyline points="12 6 12 12 16 14" />
                         </svg>
-                        <span class="text-sm">{{ $footer->working_hours }}</span>
+                        <span class="text-sm font-roboto font-light">{{ $footer->working_hours }}</span>
                     </div>
                 </div>
 
@@ -423,7 +418,7 @@
                                 <path
                                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                             </svg>
-                            <span class="text-[17px]">{{ $footer->phone_number }}</span>
+                            <span class="text-[17px] font-roboto font-light">{{ $footer->phone_number }}</span>
                         </div>
                         <!-- Email -->
                         <div class="flex items-center space-x-2">
@@ -447,7 +442,7 @@
                             <circle cx="12" cy="12" r="10" />
                             <polyline points="12 6 12 12 16 14" />
                         </svg>
-                        <span class="text-[17px]">{{ $footer->working_hours }}</span>
+                        <span class="text-[17px] font-roboto font-light">{{ $footer->working_hours }}</span>
                     </div>
                     <div class="hidden md:flex space-x-2 justify-center items-center mt-4">
                         @forelse ($links as $item)

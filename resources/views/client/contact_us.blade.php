@@ -136,7 +136,7 @@
                 <div class="relative col-span-1 h-[300px] text-white  cursor-pointer" data-aos="fade-right"
                     data-aos-offset="200" data-aos-easing="ease-in-sine">
                     <a class="rounded-md absolute top-0 w-full h-full overflow-hidden" target="_blank"
-                        href="{{ $item->link_location_second }}">
+                        href="{{ $item->link_location_first }}">
                         <img src="{{ asset('assets/images/contacts/' . $item->image_first) }}"
                             class="opacity-30 aspect-video w-full h-full object-cover rounded-xl" />
                     </a>

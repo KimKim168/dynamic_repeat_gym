@@ -4,8 +4,8 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use App\Models\news;
-use App\Models\newsCategory;
+use App\Models\News;
+use App\Models\NewsCategory;
 
 use Image;
 use Illuminate\Support\Facades\File;
@@ -25,7 +25,7 @@ class NewsEdit extends Component
 
     public function mount($id)
     {
-        $this->item = news::findOrFail($id);
+        $this->item = News::findOrFail($id);
 
         $this->news_category_id = $this->item->news_category_id;
         $this->name = $this->item->name;
@@ -45,7 +45,7 @@ class NewsEdit extends Component
                 // Add validation rules for 'newCategoryNameKh' if needed
             ]);
 
-            newsCategory::create([
+            NewsCategory::create([
                 'name' => $this->newCategoryName,
                 'name_kh' => $this->newCategoryNameKh,
             ]);
@@ -141,7 +141,7 @@ class NewsEdit extends Component
 
     public function render()
     {
-        $categories = newsCategory::latest()->get();
+        $categories = NewsCategory::latest()->get();
 
         return view('livewire.news-edit', [
             'categories' => $categories,

@@ -6,9 +6,9 @@ use Livewire\Attributes\Url;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-use App\Models\news;
-use App\Models\newsImage;
-use App\Models\newsCategory;
+use App\Models\News;
+use App\Models\NewsImage;
+use App\Models\NewsCategory;
 use Illuminate\Support\Facades\File;
 
 class NewsTableData extends Component
@@ -50,7 +50,7 @@ class NewsTableData extends Component
     }
 
     public function delete($id) {
-        $item = news::findOrFail($id);
+        $item = News::findOrFail($id);
 
         if($item->image !== 'image.png') {
             $imagePathThumb = public_path('assets/images/news/thumb/' . $item->image);
@@ -72,7 +72,7 @@ class NewsTableData extends Component
             }
         }
 
-        $multiImages = newsImage::where('news_id', $item->id)->get();
+        $multiImages = NewsImage::where('news_id', $item->id)->get();
         if($multiImages){
             foreach($multiImages as $image) {
                 $imagePathThumb = public_path('assets/images/news/thumb/' . $image->image);
@@ -94,7 +94,7 @@ class NewsTableData extends Component
 
     public function render(){
 
-        $items = news::where(function($query){
+        $items = News::where(function($query){
                                 $query->where('name', 'LIKE', "%$this->search%")
                                     ->orWhere('description', 'LIKE', "%$this->search%");
                             })
@@ -103,8 +103,8 @@ class NewsTableData extends Component
                             })
                             ->orderBy($this->sortBy, $this->sortDir)
                             ->paginate($this->perPage);
-        $categories = newsCategory::latest()->get();
-        $selectedCategory = newsCategory::find($this->filter);
+        $categories = NewsCategory::latest()->get();
+        $selectedCategory = NewsCategory::find($this->filter);
 
         return view('livewire.news-table-data', [
             'items' => $items,

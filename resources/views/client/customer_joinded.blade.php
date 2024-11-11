@@ -2,7 +2,7 @@
 @section('content')
     <!--strat image with contant -->
     <section class="mt-6">
-        <img src="{{ asset('assets/images/gallery/17290534531yo21pPUqF.jpg') }}" class=" aspect-[16/4] w-full object-cover" />
+        <img src="{{ asset('assets/images/bg/banner_customer_join.jpg') }}" class=" aspect-[16/4] w-full object-cover position-top" />
     </section>
     <!--end image with contant -->
     <!-- Strat contactUS -->
@@ -17,7 +17,7 @@
                 </p>
             </div>
             <div class="mt-8 md:mt-12">
-                <a href="index.html"
+                <a href="/"
                     class="bg-[#11ace3] p-3 px-6 text-lg md:text-2xl font-costum8 rounded-full hover:bg-[#11abe3bf]">
                     HOME
                 </a>

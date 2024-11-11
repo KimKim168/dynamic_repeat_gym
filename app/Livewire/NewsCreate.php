@@ -4,8 +4,8 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use App\Models\news;
-use App\Models\newsCategory;
+use App\Models\News;
+use App\Models\NewsCategory;
 
 use Image as ImageClass;
 
@@ -33,7 +33,7 @@ class NewsCreate extends Component
                 // Add validation rules for 'newCategoryNameKh' if needed
             ]);
 
-            newsCategory::create([
+            NewsCategory::create([
                 'name' => $this->newCategoryName,
                 'name_kh' => $this->newCategoryNameKh,
             ]);
@@ -111,14 +111,14 @@ class NewsCreate extends Component
             $validated['pdf'] = $filename;
         }
 
-        $createdImage = news::create($validated);
+        $createdImage = News::create($validated);
 
         return redirect()->route('admin.news.index')->with('success', 'Successfully uploaded!');
     }
 
     public function render()
     {
-        $categories = newsCategory::latest()->get();
+        $categories = NewsCategory::latest()->get();
 
         return view('livewire.news-create', [
             'categories' => $categories,

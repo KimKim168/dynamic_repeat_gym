@@ -14,7 +14,7 @@ use App\Models\Video;
 use App\Models\Image;
 use App\Models\Audio;
 use App\Models\Article;
-use App\Models\news;
+use App\Models\News;
 use App\Models\Menu;
 use App\Models\WebsiteInfo;
 use Image as ImageCompress;
@@ -31,7 +31,7 @@ class HomeController extends Controller
     { 
        $homeTopPages = Page::where('position', 'home_top')->limit(3)->orderBy('order_index')->get();
        $homeBottomPages = Page::where('position', 'home_bottom')->limit(3)->orderBy('order_index')->get();
-       $homeSlides = Slide::where('position', 'home_slides')->limit(5)->orderBy('order_index')->get();
+       $homeSlides = Slide::where('position', 'home_slides')->orderBy('order_index')->get();
        $homeImage = Gallery::where('position', 'home')->first();
         return view('client.index', [
             'homeTopPages' => $homeTopPages,
@@ -67,7 +67,7 @@ class HomeController extends Controller
             'whyRepeatGymCertifiedCoachRight',
             'ourMissionHeading',
             'ourMissionFirstImage',
-            'ourMissionSecondImage',
+            'ourMissionSecondImage'
         ));
     }
     
@@ -84,7 +84,7 @@ class HomeController extends Controller
         $groupTranningItem = Heading::where('position', 'group_tranning_item')->orderBy('position')->get();
         $persionalTranning = Heading::where('position', 'persional_tranning')->first();
         $persionalTranningItem = Heading::where('position', 'persional_tranning_item')->orderBy('position')->get();
-        $ourServiceSlides = Slide::where('position', 'our_services_slides')->limit(3)->orderBy('order_index')->get();
+        $ourServiceSlides = Slide::where('position', 'our_services_slides')->orderBy('order_index')->get();
 
 
         return view('client.service', compact(
@@ -95,7 +95,7 @@ class HomeController extends Controller
             'groupTranningItem',
             'persionalTranning',
             'persionalTranningItem',
-            'ourServiceSlides',
+            'ourServiceSlides'
 
         ));
     }
@@ -137,7 +137,7 @@ class HomeController extends Controller
     	$tips = News::orderBy('id', 'asc')->paginate(10);
 
         return view('client.tip',[
-            'tips' => $tips, 
+            'tips' => $tips
         ]);
     }
 
@@ -186,7 +186,7 @@ class HomeController extends Controller
 
         return view('client.news', compact(
             'newsPages',
-            'ourBlogHeading',
+            'ourBlogHeading'
         ));
     }
 
@@ -195,7 +195,7 @@ class HomeController extends Controller
     {
         $page = Page::findOrFail($id);
         return view('client.page_detail', compact(
-            'page',
+            'page'
         ));
     }
 
@@ -205,7 +205,7 @@ class HomeController extends Controller
     {
         $news = News::findOrFail($id);
         return view('client.news_detail', compact(
-            'news',
+            'news'
         ));
     }
 }
