@@ -2,19 +2,24 @@
 @section('content')
     <section
         style="
-    background-image: url('assets/images/bg/Background\ Home\ Page.jpg');
+    background-image: url('assets/images/bg/whyRepeatGym.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-position-x: center;
 ">
+
         <!-- End hero -->
         <div class="relative lg:mt-5 mt-[75px]  overflow-hidden  ">
-            <div class="flex items-center justify-center bg-cover aspect-[16/4] bg-center duration-700 ease-in-out"
+            <div class="flex items-center justify-center bg-cover aspect-[16/3] bg-center duration-700 ease-in-out"
                 data-carousel-item
                 style="background-image: url('{{ asset('assets/images/gallery/' . ($whyRepeatGymBanner ? $whyRepeatGymBanner->image : '')) }}')">
                 <!-- Dark Overlay -->
-                <div class="absolute inset-0"></div>
+                <div class="absolute inset-0 bg-[#000000] bg-opacity-60"></div>
+                <div class="absolute inset-0 w-full ">
+                    <img src="{{ asset('assets/images/bg/backgroundStyle.png') }}" alt=""
+                        class="w-full h-full object-center transform scale-x-[1]">
+                </div>
                 <!-- Content -->
                 <div class="relative z-10 flex flex-col items-center justify-center text-center text-white px-4">
                     <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-costum3 text-white uppercase">
@@ -115,7 +120,11 @@
                  background-position: center;
                 background-repeat: no-repeat;
             ">
-            <div class="absolute inset-0 bg-[#000000] bg-opacity-95"></div>
+            <div class="absolute inset-0 bg-[#000000] bg-opacity-[0.96]"></div>
+            <div class="absolute inset-0 w-full h-full">
+                <img src="{{ asset('assets/images/bg/backgroundStyle.png') }}" alt="" class=" h-full object-bottom">
+            </div>
+
             <div class="relative max-w-screen-xl mx-auto flex flex-col md:flex-row items-center gap-10 px-4">
                 <!-- Image Section -->
                 <div class="flex-1">
@@ -137,12 +146,16 @@
         <!-- Strat section -->
         <section class="my-20 mt-32 relative py-5 px-3 md:p-8  bg-blend-multiply "
             style="
-                clip-path: polygon(0 3%, 99% 0, 100% 94%, 0 100%);
+                clip-path: polygon(0 3%, 100% 0, 100% 94%, 0 100%);
                 background-image: url('assets/images/gallery/1729064338kCDPl6gkSY.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
             ">
-            <div class="absolute inset-0 bg-[#151516d7] bg-opacity-90 "></div>
+            <div class="absolute inset-0 bg-[#000000] bg-opacity-[0.96] "></div>
+            <div class="absolute inset-0 w-full h-full">
+                <img src="{{ asset('assets/images/bg/backgroundStyle.png') }}" alt="" class="w-full  object-cover">
+            </div>
+
             <div class=" overflow-hidden">
                 <div
                     class="uppercase py-2 text-[#11ace3] text-[12px] sm:text-[16px] md:text-xl lg:text-2xl font-costum3 text-center">

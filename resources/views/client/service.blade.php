@@ -25,8 +25,11 @@ background-position-x: center;
                                 background-image: url('{{ asset('assets/images/slides/' . $item->image) }}');
                             ">
                                 <!-- Dark Overlay -->
-                                <div class="absolute inset-0 bg-[#151516a6] bg-opacity-80"></div>
-
+                                {{-- <div class="absolute inset-0 bg-[#151516a6] bg-opacity-80"></div> --}}
+                                <div class="absolute inset-0 bg-[#151516] bg-opacity-60 w-full h-full">
+                                    <img src="{{ asset('assets/images/bg/backgroundStyle.png') }}" alt=""
+                                        class="w-full h-auto object-contain">
+                                </div>
                                 <!-- Content -->
                                 <div
                                     class="relative z-10 flex flex-col items-center justify-center text-center text-white px-4">
@@ -68,131 +71,27 @@ background-position-x: center;
                     </div>
                 </div>
                 <!-- group tranning -->
-                <div class="bg-[#000000] mb-20 bg-no-repeat  bg-blend-multiply overflow-hidden"
-                    style="
+                <div class=" lg:mt-5 mt-[75px]  overflow-hidden  ">
+                    <div class="bg-[#000000] bg-opacity-[0.96] relative mb-20 bg-no-repeat   bg-blend-multiply overflow-hidden"
+                        style="
                         background-image: url('assets/images/bg/young-man-sportswear-exercise-class-gym.jpg');
                         background-size: cover;
                     ">
-                    <!-- Item 1 -->
-                    <div
-                        class="gap-8 py-8 items-center px-3 md:px-3 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 ">
-                        <div class="transition duration-300 hover:cursor-pointer" data-aos="fade-up"
-                            data-aos-duration="600">
-                            <!-- Swiper -->
-                            <swiper-container class="mySwiper" pagination="true" pagination-clickable="true"
-                                space-between="30" centered-slides="true" autoplay-delay="3000"
-                                autoplay-disable-on-interaction="false">
-
-                                @forelse ($trainingOptionSlideImageTop as $item)
-                                    <swiper-slide>
-                                        <div class="flex items-center justify-center h-[500px] w-full bg-cover bg-center bg-blend-multiply"
-                                            data-carousel-item
-                                            style="
-                                            background-image: url('{{ asset('assets/images/gallery/' . $item->image) }}');
-                                        ">
-                                        </div>
-                                    </swiper-slide>
-                                @empty
-                                    <p
-                                        class="text-red-500 text-center max-w-screen-xl mx-auto  text-xs md:text-base font-costum8">
-                                        No available</p>
-                                @endforelse
-
-                            </swiper-container>
-                            <!-- Swiper JS -->
-                            <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+                        <div class="absolute inset-0 w-full h-full">
+                            <img src="{{ asset('assets/images/bg/backgroundStyle.png') }}" alt=""
+                                class=" w-full transform scale-x-[-1]">
                         </div>
-                        <div class="md:mt-0 mt-4 flex flex-col p-2">
-
-                            <div class="text-center">
-                                @if ($groupTranning)
-                                    <h2
-                                        class="mb-2 md:mb-7 text-3xl md:text-5xl tracking-tight text-center font-costum5 text-[#11ace3] uppercase">
-                                        {{ $groupTranning->name }}
-                                    </h2>
-                                    <p class="md:mb-6 mb-2 font-costum4 text-white md:text-xl">
-                                        {{ $groupTranning->short_description }}
-                                    </p>
-                                @endif
-
-                            </div>
-
-
-                            <div class="space-y-20">
-                                @forelse ($groupTranningItem as $item)
-                                    <div class="flex justify-center items-end">
-                                        <div class="flex flex-col bg-[#000000] p-8" data-aos="fade-right"
-                                            data-aos-duration="1000">
-                                            <h4 class="font-extrabold text-[#11ace3] text-xl">
-                                                {{ $item->name }}
-                                            </h4>
-                                            <p class="text-sm line-clamp-2 w-[300px] mt-2 font-costum4">
-                                                {{ $item->short_description }}
-                                            </p>
-                                        </div>
-                                    </div>
-                                @empty
-                                    <p
-                                        class="text-red-500 text-center max-w-screen-xl mx-auto  text-xs md:text-base font-costum8">
-                                        No available</p>
-                                @endforelse
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Persion tranning -->
-                <div class="bg-[#00000072] bg-no-repeat bg-gray-700 bg-blend-multiply overflow-hidden"
-                    style="
-                        background-image: url('assets/images/bg/young-man-sportswear-exercise-class-gym.jpg');
-                        background-size: cover;
-                    ">
-                    <!-- Item 2 -->
-                    <div
-                        class="gap-8 py-8 items-center px-3 md:px-3 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 overflow-hidden">
-                        <div class="md:mt-0 flex flex-col p-2" data-aos="fade-right" data-aos-duration="600">
-                            <div class="text-center">
-                                <h2
-                                    class="mb-2 md:mb-7 text-3xl md:text-5xl tracking-tight text-center font-costum5 text-[#11ace3] uppercase">
-                                    {{ $persionalTranning->name }}
-                                </h2>
-                                <p class="md:mb-6 mb-2 font-costum4 text-white md:text-xl">
-                                    {{ $persionalTranning->short_description }}
-                                </p>
-
-
-                            </div>
-                            <div class="space-y-20">
-                                @forelse ($persionalTranningItem as $item)
-                                    <div class="flex justify-center items-end">
-                                        <div class="flex flex-col bg-[#000000] p-8" data-aos="fade-left"
-                                            data-aos-duration="1000">
-                                            <h4 class="font-extrabold text-[#11ace3] text-xl">
-                                                {{ $item->name }}
-                                            </h4>
-                                            <p class="text-sm line-clamp-2 w-[300px] mt-2 font-costum4">
-                                                {{ $item->short_description }}
-                                            </p>
-                                        </div>
-                                    </div>
-                                @empty
-                                    <p
-                                        class="text-red-500 text-center max-w-screen-xl mx-auto  text-xs md:text-base font-costum8">
-                                        No available</p>
-                                @endforelse
-
-
-                            </div>
-                        </div>
-                        <div class="hover:cursor-pointer overflow-hidden" data-aos="fade-left" data-aos-duration="600">
-                            <div class="transition duration-300 hover:cursor-pointer">
+                        <!-- Item 1 -->
+                        <div
+                            class="gap-8 py-8 items-center px-3 md:px-3 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 ">
+                            <div class="transition duration-300 hover:cursor-pointer" data-aos="fade-up"
+                                data-aos-duration="600">
                                 <!-- Swiper -->
                                 <swiper-container class="mySwiper" pagination="true" pagination-clickable="true"
                                     space-between="30" centered-slides="true" autoplay-delay="3000"
                                     autoplay-disable-on-interaction="false">
-                                    <!-- slide 1 -->
-                                    @forelse ($trainingOptionSlideImageBottom as $item)
+
+                                    @forelse ($trainingOptionSlideImageTop as $item)
                                         <swiper-slide>
                                             <div class="flex items-center justify-center h-[500px] w-full bg-cover bg-center bg-blend-multiply"
                                                 data-carousel-item
@@ -211,10 +110,125 @@ background-position-x: center;
                                 <!-- Swiper JS -->
                                 <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
                             </div>
+                            <div class="md:mt-0 mt-4 flex flex-col p-2">
+
+                                <div class="text-center">
+                                    @if ($groupTranning)
+                                        <h2
+                                            class="mb-2 md:mb-7 text-3xl md:text-5xl tracking-tight text-center font-costum5 text-[#11ace3] uppercase">
+                                            {{ $groupTranning->name }}
+                                        </h2>
+                                        <p class="md:mb-6 mb-2 font-costum4 text-white md:text-xl">
+                                            {{ $groupTranning->short_description }}
+                                        </p>
+                                    @endif
+
+                                </div>
+
+
+                                <div class="space-y-20">
+                                    @forelse ($groupTranningItem as $item)
+                                        <div class="flex justify-center items-end">
+                                            <div class="flex flex-col bg-[#0c0c0c] p-8" data-aos="fade-right"
+                                                data-aos-duration="1000">
+                                                <h4 class="font-extrabold text-[#11ace3] text-xl">
+                                                    {{ $item->name }}
+                                                </h4>
+                                                <p class="text-sm line-clamp-2 w-[300px] mt-2 font-costum4">
+                                                    {{ $item->short_description }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    @empty
+                                        <p
+                                            class="text-red-500 text-center max-w-screen-xl mx-auto  text-xs md:text-base font-costum8">
+                                            No available</p>
+                                    @endforelse
+
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <!-- Persion tranning -->
+                <div class=" lg:mt-5 mt-[75px]  overflow-hidden  ">
+                    <div class="bg-[#000000] bg-opacity-[0.96] relative mb-20 bg-no-repeat   bg-blend-multiply overflow-hidden"
+                        style="
+                        background-image: url('assets/images/bg/young-man-sportswear-exercise-class-gym.jpg');
+                        background-size: cover;
+                    ">
+                        <div class="absolute inset-0 w-full h-full">
+                            <img src="{{ asset('assets/images/bg/backgroundStyle.png') }}" alt=""
+                                class=" w-full transform scale-y-[-1]">
+                        </div>
+                        <!-- Item 2 -->
+                        <div
+                            class="gap-8 py-8 items-center px-3 md:px-3 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 overflow-hidden">
+                            <div class="md:mt-0 flex flex-col p-2" data-aos="fade-right" data-aos-duration="600">
+                                <div class="text-center">
+                                    <h2
+                                        class="mb-2 md:mb-7 text-3xl md:text-5xl tracking-tight text-center font-costum5 text-[#11ace3] uppercase">
+                                        {{ $persionalTranning->name }}
+                                    </h2>
+                                    <p class="md:mb-6 mb-2 font-costum4 text-white md:text-xl">
+                                        {{ $persionalTranning->short_description }}
+                                    </p>
+
+
+                                </div>
+                                <div class="space-y-20">
+                                    @forelse ($persionalTranningItem as $item)
+                                        <div class="flex justify-center items-end">
+                                            <div class="flex flex-col bg-[#080808] p-8" data-aos="fade-left"
+                                                data-aos-duration="1000">
+                                                <h4 class="font-extrabold text-[#11ace3] text-xl">
+                                                    {{ $item->name }}
+                                                </h4>
+                                                <p class="text-sm line-clamp-2 w-[300px] mt-2 font-costum4">
+                                                    {{ $item->short_description }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    @empty
+                                        <p
+                                            class="text-red-500 text-center max-w-screen-xl mx-auto  text-xs md:text-base font-costum8">
+                                            No available</p>
+                                    @endforelse
+
+
+                                </div>
+                            </div>
+                            <div class="hover:cursor-pointer overflow-hidden" data-aos="fade-left" data-aos-duration="600">
+                                <div class="transition duration-300 hover:cursor-pointer">
+                                    <!-- Swiper -->
+                                    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true"
+                                        space-between="30" centered-slides="true" autoplay-delay="3000"
+                                        autoplay-disable-on-interaction="false">
+                                        <!-- slide 1 -->
+                                        @forelse ($trainingOptionSlideImageBottom as $item)
+                                            <swiper-slide>
+                                                <div class="flex items-center justify-center h-[500px] w-full bg-cover bg-center bg-blend-multiply"
+                                                    data-carousel-item
+                                                    style="
+                                            background-image: url('{{ asset('assets/images/gallery/' . $item->image) }}');
+                                        ">
+                                                </div>
+                                            </swiper-slide>
+                                        @empty
+                                            <p
+                                                class="text-red-500 text-center max-w-screen-xl mx-auto  text-xs md:text-base font-costum8">
+                                                No available</p>
+                                        @endforelse
+
+                                    </swiper-container>
+                                    <!-- Swiper JS -->
+                                    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
         <!--End Image with CTA button  -->
 
@@ -231,11 +245,15 @@ background-position-x: center;
 
 
             <!-- Main Section -->
-            <div class="lg:mt-20 p-4 pb-10 w-full h-full bg-gray-700 bg-no-repeat bg-center bg-contain bg-blend-multiply"
+            <div class="relative lg:mt-20 p-4 pb-10 w-full h-full  bg-black bg-opacity-95 bg-no-repeat bg-center bg-contain bg-blend-multiply"
                 style="
-                    background-image: url('assets/images/gallery/1729064338kCDPl6gkSY.jpg');
+                    background-image: url('assets/images/bg/bgMen1.jpg');
                     background-size: cover;
                 ">
+                <div class="absolute inset-0 w-full h-full">
+                    <img src="{{ asset('assets/images/bg/backgroundStyle.png') }}" alt=""
+                        class=" w-full h-auto object-contain transform scale-y-[1] scale-x-[-1]">
+                </div>
                 <div class="max-w-screen-xl mx-auto py-10">
                     <!-- Responsive Grid -->
                     <div

@@ -81,6 +81,27 @@
         }
 
         @font-face {
+            font-family: 'Koulen';
+            src: url('assets/fonts/Koulen.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'NokoraBold';
+            src: url('assets/fonts/Nokora-Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Nokora';
+            src: url('assets/fonts/Nokora-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
             font-family: "Costum9";
             src: url("assets/fonts/Raleway-Italic.ttf") format("truetype");
             font-weight: normal;
@@ -198,7 +219,9 @@
                         warningHover: "#ffb915",
                     },
                     fontFamily: {
-                        koluen: ["Koulen"],
+                        koulen: ["Koulen"],
+                        nokora: ["Nokora"],
+                        nokoraBold: ["NokoraBold"],
                         costum1: ["Costum1", "sans-serif"],
                         costum2: ["Costum2", "sans-serif"],
                         costum3: ["Costum3", "sans-serif"],
