@@ -10,13 +10,15 @@
 ">
         <!--Strat Image with CTA button  -->
         <div class="relative overflow-hidden mt-[40px] lg:mt-0">
-            <section class="mt-8 aspect-video max-w-screen-2xl mx-auto bg-center bg-blend-multiply"
+            <section class="mt-8 aspect-video max-w-screen-2xl mx-auto bg-top  bg-no-repeat"
                 style="
                 background-image: url('{{ asset('assets/images/bg/bgMen1.jpg') }}');
                 clip-path: polygon(0 0, 100% 0, 100% 49%, 0 55%);
                 background-size: cover;
+                background-position-y: -326px;
+
             ">
-                <div class="absolute inset-0 bg-[#000000] bg-opacity-95"></div>
+                <div class="absolute inset-0 bg-[#000000] bg-opacity-90"></div>
                 <div class="absolute inset-0  w-full ">
                     <img src="{{ asset('assets/images/bg/backgroundStyle.png') }}" alt=""
                         class="w-full h-auto object-contain">
@@ -55,7 +57,7 @@
         <!--End Image with CTA button  -->
         <!-- strat uor locations -->
         <section class="overflow-hidden">
-            <div class="my-24 py-20  md:py-[80px]  bg-center bg-[#000000] bg-opacity-[0.97] bg-repeat bg-blend-multiply"
+            <div class="my-24 py-20  md:py-[80px]  bg-center bg-[#000000] bg-opacity-[0.95] bg-repeat bg-blend-multiply"
                 style="
                     background-position: center;
                     background-image: url(assets/images/bg/bg1.jpg);

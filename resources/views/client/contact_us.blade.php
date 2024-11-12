@@ -124,7 +124,7 @@
                     <circle cx="12" cy="12" r="10" />
                     <polyline points="12 6 12 12 16 14" />
                 </svg>
-                <span class="text-[12px] sm:text-base md:text-lg mx-2 ">
+                <span class="text-[12px] sm:text-base md:text-[16px] mx-2 font-roboto font-light">
                     {{ $footer->working_hours }}
                 </span>
             </div>
