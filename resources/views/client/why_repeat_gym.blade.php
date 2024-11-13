@@ -120,7 +120,7 @@
                  background-position: center;
                 background-repeat: no-repeat;
             ">
-            <div class="absolute inset-0 bg-[#000000] bg-opacity-[0.96]"></div>
+            <div class="absolute inset-0 bg-[#000000] bg-opacity-[0.98]"></div>
             <div class="absolute inset-0 w-full h-full">
                 <img src="{{ asset('assets/images/bg/backgroundStyle.png') }}" alt="" class=" h-full object-bottom">
             </div>
@@ -147,11 +147,11 @@
         <section class="my-20 mt-32 relative py-5 px-3 md:p-8  bg-blend-multiply "
             style="
                 clip-path: polygon(0 3%, 100% 0, 100% 94%, 0 100%);
-                background-image: url('assets/images/gallery/1729064338kCDPl6gkSY.jpg');
+                background-image: url('assets/images/bg/youngMan2.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
             ">
-            <div class="absolute inset-0 bg-[#000000] bg-opacity-[0.96] "></div>
+            <div class="absolute inset-0 bg-[#000000] bg-opacity-[0.9] "></div>
             <div class="absolute inset-0 w-full h-full">
                 <img src="{{ asset('assets/images/bg/backgroundStyle.png') }}" alt="" class="w-full  object-cover">
             </div>
@@ -166,12 +166,12 @@
                         clients achieve their fitness goals
                     </p>
                 </div>
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 my-10 md:mt-36">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 my-10 md:mt-36">
                     @forelse ($whyRepeatGymGallery as $index => $item)
                         <div
-                            class="relative {{ $index % 2 !== 0 ? 'md:-top-24' : '' }}  border-2 border-transparent hover:border-[#4fd0ff] md:hover:scale-110 hover:scale-95 md:hover:duration-1000 md:hover:transition duration-1000 transition duration-900 hover:cursor-pointer">
+                            class="relative {{ $index % 2 !== 0 ? 'md:-top-24' : '' }}  border-2 border-transparent hover:border-[#4fd0ff] md:hover:scale-105  md:hover:duration-1000 md:hover:transition duration-1000 transition duration-900 hover:cursor-pointer">
                             <img src="{{ asset('assets/images/gallery/' . $item->image) }}"
-                                class="aspect-square object-cover" />
+                                class="w-full h-full aspect-square object-cover" />
                         </div>
                     @empty
                     @endforelse

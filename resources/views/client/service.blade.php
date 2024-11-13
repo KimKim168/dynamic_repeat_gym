@@ -26,9 +26,9 @@ background-position-x: center;
                             ">
                                 <!-- Dark Overlay -->
                                 {{-- <div class="absolute inset-0 bg-[#151516a6] bg-opacity-80"></div> --}}
-                                <div class="absolute inset-0 bg-[#151516] bg-opacity-60 w-full h-full">
+                                <div class="absolute inset-0 bg-[#151516] bg-opacity-60 w-full h-full ">
                                     <img src="{{ asset('assets/images/bg/backgroundStyle.png') }}" alt=""
-                                        class="w-full h-auto object-contain">
+                                        class="w-full h-auto object-contain ">
                                 </div>
                                 <!-- Content -->
                                 <div
@@ -72,15 +72,15 @@ background-position-x: center;
                 </div>
                 <!-- group tranning -->
                 <div class=" lg:mt-5 mt-[75px]  overflow-hidden  ">
-                    <div class="bg-[#000000] bg-opacity-[0.96] relative mb-20 bg-no-repeat   bg-blend-multiply overflow-hidden"
+                    <div class="bg-[#000000] bg-opacity-[0.98] relative mb-20 bg-no-repeat   bg-blend-multiply overflow-hidden"
                         style="
                         background-image: url('assets/images/bg/young-man-sportswear-exercise-class-gym.jpg');
                         background-size: cover;
                     ">
-                        <div class="absolute inset-0 w-full h-full">
+                        {{-- <div class="absolute inset-0 w-full h-full">
                             <img src="{{ asset('assets/images/bg/backgroundStyle.png') }}" alt=""
                                 class=" w-full transform scale-x-[-1]">
-                        </div>
+                        </div> --}}
                         <!-- Item 1 -->
                         <div
                             class="gap-8 py-8 items-center px-3 md:px-3 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 ">
@@ -153,15 +153,15 @@ background-position-x: center;
                 </div>
                 <!-- Persion tranning -->
                 <div class=" lg:mt-5 mt-[75px]  overflow-hidden  ">
-                    <div class="bg-[#000000] bg-opacity-[0.96] relative mb-20 bg-no-repeat   bg-blend-multiply overflow-hidden"
+                    <div class="bg-[#000000] bg-opacity-[0.98] relative mb-20 bg-no-repeat   bg-blend-multiply overflow-hidden"
                         style="
                         background-image: url('assets/images/bg/young-man-sportswear-exercise-class-gym.jpg');
                         background-size: cover;
                     ">
-                        <div class="absolute inset-0 w-full h-full">
+                        {{-- <div class="absolute inset-0 w-full h-full">
                             <img src="{{ asset('assets/images/bg/backgroundStyle.png') }}" alt=""
                                 class=" w-full transform scale-y-[-1]">
-                        </div>
+                        </div> --}}
                         <!-- Item 2 -->
                         <div
                             class="gap-8 py-8 items-center px-3 md:px-3 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 overflow-hidden">
